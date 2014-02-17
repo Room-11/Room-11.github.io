@@ -1,3 +1,7 @@
+How to fix “Headers already sent” error in PHP
+
+    http://stackoverflow.com/questions/8028957/how-to-fix-headers-already-sent-error-in-php
+
 How can I prevent SQL injection in PHP?
 
     http://stackoverflow.com/questions/60174/how-can-i-prevent-sql-injection-in-php
