@@ -14,6 +14,10 @@ How do you parse and process HTML/XML in PHP?
 
     http://stackoverflow.com/questions/3577641/how-do-you-parse-and-process-html-xml-in-php
     
+How do you get a useful error message out of PHP?
+    
+    http://stackoverflow.com/questions/845021/how-to-get-useful-error-messages-in-php
+    
 Reference - What does this error mean in PHP?
 
     http://stackoverflow.com/questions/12769982/reference-what-does-this-error-mean-in-php
