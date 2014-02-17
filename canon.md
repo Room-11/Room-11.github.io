@@ -33,3 +33,7 @@ Why shouldn't I use mysql_* functions in PHP?
 How should a model be structured in MVC?
 
     http://stackoverflow.com/questions/5863870/how-should-a-model-be-structured-in-mvc
+
+Introduction to OOP and design patterns
+
+    http://stackoverflow.com/questions/16356420/mvc-for-advanced-developers/16356866#16356866
