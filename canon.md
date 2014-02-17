@@ -45,3 +45,7 @@ How should a model be structured in MVC?
 Introduction to OOP and design patterns
 
     http://stackoverflow.com/questions/16356420/mvc-for-advanced-developers/16356866#16356866
+
+Are PDO prepared statements sufficient to prevent SQL injection?
+
+    http://stackoverflow.com/a/12202218/747609
