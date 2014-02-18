@@ -49,3 +49,23 @@ Introduction to OOP and design patterns
 Are PDO prepared statements sufficient to prevent SQL injection?
 
     http://stackoverflow.com/a/12202218/747609
+
+How do I expire a PHP session after 30 minutes?
+
+    http://stackoverflow.com/questions/520237/how-do-i-expire-a-php-session-after-30-minutes
+    
+Exploitable PHP functions
+
+    http://stackoverflow.com/questions/3115559/exploitable-php-functions
+    
+UTF-8 all the way through
+
+    http://stackoverflow.com/questions/279170/utf-8-all-the-way-through
+
+User recognition without cookies or local storage
+
+    http://stackoverflow.com/questions/15966812/user-recognition-without-cookies-or-local-storage
+    
+Reference: all basic ways to sort arrays and data in PHP
+
+    http://stackoverflow.com/questions/17364127/reference-all-basic-ways-to-sort-arrays-and-data-in-php
