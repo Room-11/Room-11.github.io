@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang='en'>
+<head>
+    <script>
+    var categories = {
+
+        'debugging': [
+            12769982, 8028957, 845021
+        ],
+
+        'design': [
+            16356420, 5863870, 5166087, 151969, 254514, 2418473, 3430181, 4361553
+        ],
+
+        'general': [
+            12859942, 15966812, 17364127, 2005079, 279170, 3577641, 7094118, 10057671, 931407, 676824
+        ],
+
+        'security': [
+            12026842, 134099, 3115559, 4795385, 60174, 520237, 129677
+        ]
+    };
+    </script>
+    <meta charset='UTF-8'>
+    <title>Canonical Questions - Room 11</title>
+    <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'>
+    <link rel='icon' href='favicon.ico' type='image/x-icon'>
+    <link rel='stylesheet' href='http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.0/normalize.min.css'>
+    <style>
+        html {
+            font-size: 14px;
+            line-height: 1.42857;
+        }
+
+        body {
+            background: #fff;
+            color: #000;
+            margin: 0 auto;
+            max-width: 60rem;
+            padding: 0 1rem;
+        }
+
+        h2 {
+            border-bottom: 1px solid #ccc;
+            color: #444;
+            margin: 25px 0 5px 0;
+            padding-bottom: 5px;
+            text-transform: capitalize;
+        }
+
+        ul {
+            list-style-type: none;
+            margin-top: 0;
+            padding-left: 0;
+        }
+
+        ul li {
+            border-bottom: 1px solid #eee;
+            margin-bottom: 5px;
+            padding: 5px 0 5px 0;
+        }
+
+        ul li .topic {
+            background-color: #e0eaf1;
+            border-bottom: 1px solid #b3cee1;
+            border-right: 1px solid #b3cee1;
+            color: #3e6d8e;
+            display: inline-block;
+            font-size: 11px;
+            line-height: 1.4;
+            margin: 5px 6px 5px 0;
+            padding: 3px 4px 3px 4px;
+            white-space: nowrap;
+        }
+
+        ul li .score {
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        ul li .score-box {
+            background-color: #eee;
+            color: #918987;
+            float: left;
+            font-size: 11px;
+            margin-right: 10px;
+            padding: 5px;
+            text-align: center;
+            width: 50px;
+        }
+
+        ul li a {
+            color: #0077DD;
+            font-weight: 700;;
+            text-decoration: none;
+        }
+
+        ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<div id='container'></div>
+<script>
+    (function () {
+        'use strict';
+
+        var resource, questionIds = [];
+
+        Object.keys(categories).forEach(function (category) {
+            questionIds.push(categories[category].join(';'));
+        });
+
+        resource = document.createElement('script');
+        resource.src = 'https://api.stackexchange.com/2.2/questions/' + questionIds.join(';')
+                + '?order=asc&sort=creation&site=stackoverflow&filter=!)94yI_.r0i6M&callback=buildLists&key='
+                + encodeURI('9Rriuek73sGszOC)36uHRA((');
+        document.body.appendChild(resource);
+
+        window.buildLists = function (data) {
+            Object.keys(categories).forEach(function (category) {
+                var container, list, header = document.createElement('h2');
+
+                header.textContent = category;
+                header.id = category;
+                header.onclick = function () {
+                    window.location.hash = category;
+                };
+
+                list = document.createElement('ul');
+
+                data.items.forEach(function (question) {
+                    var topicTags, score, scoreBox, listItem, questionLink;
+
+                    if (-1 < categories[category].indexOf(question.question_id)) {
+
+                        score = document.createElement('span');
+                        score.className = 'score';
+                        score.textContent = question.score;
+
+                        scoreBox = document.createElement('span');
+                        scoreBox.className = 'score-box';
+                        scoreBox.appendChild(score);
+                        scoreBox.appendChild(document.createElement('br'));
+                        scoreBox.appendChild(document.createTextNode('Votes'));
+
+                        topicTags = document.createElement('div');
+                        question.tags.forEach(function (topic) {
+                            var topicTag = document.createElement('span');
+                            topicTag.className = 'topic';
+                            topicTag.textContent = topic;
+                            topicTags.appendChild(topicTag);
+                        });
+
+                        questionLink = document.createElement('a');
+                        questionLink.href = question.link;
+                        questionLink.target = '_blank';
+                        questionLink.innerHTML = question.title;
+
+                        listItem = document.createElement('li');
+                        listItem.appendChild(scoreBox);
+                        listItem.appendChild(questionLink);
+                        listItem.appendChild(topicTags);
+
+                        list.appendChild(listItem);
+                    }
+                });
+
+                container = document.getElementById('container');
+                container.appendChild(header);
+                container.appendChild(list);
+            });
+        };
+    }());
+</script>
+</body>
+</html>
