@@ -9,7 +9,7 @@
         ],
 
         'design': [
-            16356420, 5863870, 5166087, 151969, 254514, 2418473, 3430181, 4361553, 4595964, 
+            16356420, 5863870, 5166087, 151969, 254514, 2418473, 3430181, 4361553, 4595964 
         ],
 
         'general': [
@@ -114,7 +114,8 @@
 
         resource = document.createElement('script');
         resource.src = 'https://api.stackexchange.com/2.2/questions/' + questionIds.join(';')
-                + '?order=asc&sort=creation&site=stackoverflow&filter=!)94yI_.r0i6M&callback=buildLists&key='
+                + '?order=asc&sort=creation&site=stackoverflow&filter='
+                + encodeURI('!)94yI_.r0i6M') + '&pagesize=100&callback=buildLists&key='
                 + encodeURI('9Rriuek73sGszOC)36uHRA((');
         document.body.appendChild(resource);
 
