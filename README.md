@@ -1,5 +1,5 @@
-# Chatroom Pact - Room 11 #
-This repo holds the GitHub Pages site for the Room 11 Pact. You can see it here: http://room-11.github.io/
+# Room 11 #
+This repo holds the GitHub Pages site for Room 11. You can see it here: http://room-11.github.io/
 
 ## Current Features ##
 - Click on any list item to highlight it.
