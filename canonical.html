@@ -109,8 +109,8 @@
 
         var resource, questionIds = [];
 
-        Object.keys(categories).forEach(function (category) {
-            questionIds.push(categories[category].join(';'));
+        questionIds = Object.keys(categories).map(function (categoryName) {
+            return categories[categoryName].join(';');
         });
 
         resource = document.createElement('script');
@@ -126,7 +126,7 @@
 
                 header.textContent = category;
                 header.id = category;
-                header.onclick = function () {
+                header.addEventListener('click', function () {
                     window.location.hash = category;
                 };
 
