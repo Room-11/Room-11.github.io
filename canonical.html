@@ -26,7 +26,7 @@
     <title>Canonical Questions - Room 11</title>
     <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'>
     <link rel='icon' href='favicon.ico' type='image/x-icon'>
-    <link rel='stylesheet' href='http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.0/normalize.min.css'>
+    <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.0/normalize.min.css'>
     <style>
         html {
             font-size: 14px;
@@ -109,8 +109,8 @@
 
         var resource, questionIds = [];
 
-        Object.keys(categories).forEach(function (category) {
-            questionIds.push(categories[category].join(';'));
+        questionIds = Object.keys(categories).map(function (categoryName) {
+            return categories[categoryName].join(';');
         });
 
         resource = document.createElement('script');
@@ -126,9 +126,9 @@
 
                 header.textContent = category;
                 header.id = category;
-                header.onclick = function () {
+                header.addEventListener('click', function () {
                     window.location.hash = category;
-                };
+                });
 
                 list = document.createElement('ul');
 
