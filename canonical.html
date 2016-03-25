@@ -156,7 +156,7 @@
                         });
 
                         questionLink = document.createElement('a');
-                        questionLink.href = question.link.replace(/^http/, 'https');
+                        questionLink.href = question.link.replace(/^(http:)?\/\//, 'https://');
                         questionLink.target = '_blank';
                         questionLink.innerHTML = question.title;
 
