@@ -14,14 +14,15 @@
 	<h1>Guides and Tutorials for Learning PHP</h1>
 	<p>Note: This guide assumes you already have an understanding of HTML/CSS.  It is highly recommended that you understand HTML/CSS before learning PHP.  <a href="https://www.freecodecamp.org/" target="_blank">Freecodecamp</a> offers practical tutorials in learning HTML/CSS/JS.</p>
 	
-	<h2>New to Programming, New to PHP</h2>
+
+	<h2><a id="new-to-programming">New to Programming, New to PHP</a></h2>
 	<p>You're new to the world of programming and wish to cut your teeth with PHP.  You already have the fundamentals of HTML/CSS.</p>
 	<ul>
 		<li><a href="https://github.com/PeeHaa/php-net-tutorial" target="_blank">https://github.com/PeeHaa/php-net-tutorial</a> - An updated PHP tutorial guide that assumes no prior programming experience</li>
 		<!-- TODO: add more introductory tutorials -->
 	</ul>
 	
-	<h2>Experienced Programmer, New to PHP</h2>
+	<h2><a id="new-to-php">Experienced Programmer, New to PHP</a></h2>
 	<p>You're already familiar with programming, but want to add PHP to your skillset.</p>
 	
 	<ul>
@@ -35,7 +36,7 @@
 		<li><a href="https://secure.php.net/manual/en/language.namespaces.rationale.php" target="_blank">https://secure.php.net/manual/en/language.namespaces.rationale.php</a> - namespaces in PHP</li>
 	</ul>
 			
-	<h2>Intermediate</h2>
+	<h2><a id="intermediate">Intermediate</a></h2>
 	<p>After getting the bssics under your belt, here are some other resources to help tie it together.</p>
 	<ul>	
 		<li><a href="https://www.phptherightway.com/" target="_blank">https://www.phptherightway.com/</a></li>
@@ -43,14 +44,14 @@
 	</ul>
 	<!-- Possible TODO: Add additional sections to other areas of learning besides security and database interaction
 		 Information on other databases other than MySQL, e.g. PostgreSQL, SQLite... -->
-	<h3>Security</h3>
+	<h3><a id="security">Security</a></h3>
 	<p>Keeping your application secure is important!  To quote <a href="https://www.owasp.org/images/7/72/OWASP_Top_10-2017_%28en%29.pdf.pdf" target="_blank">OWASP's Top 10 2017</a>: the harm [of a vulnerable application] that is caused may be of no consequence, or it may put you out of business.  Ignoring your application's security is not a valid defense in protecting yourself.</p>
 	<ul>
 		<li><a href="https://paragonie.com/blog/2017/12/2018-guide-building-secure-php-software" target="_blank">https://paragonie.com/blog/2017/12/2018-guide-building-secure-php-software</a> - a newer guide on writing secure PHP software</li>
 		<li><a href="http://php.net/manual/en/faq.passwords.php" target="_blank">http://php.net/manual/en/faq.passwords.php</a> - explanation on password hashing</li>
 	</ul>
 	
-	<h3>Database Interaction</h3>
+	<h3><a id="database">Database Interaction</a></h3>
 	<p>There will likely become a time that you'll need to interact with a database.  <a href="http://php.net/manual/en/book.pdo.php" target="_blank">PDO</a> is best suited to this task.</p>
 	<ul>
 		<li><a href="http://wiki.hashphp.org/PDO_Tutorial_for_MySQL_Developers" target="_blank">http://wiki.hashphp.org/PDO_Tutorial_for_MySQL_Developers</a> - learning how to use PDO when coming from a MySQL/MySQLi background</li>
@@ -58,32 +59,33 @@
 		<li><a href="https://stackoverflow.com/a/12202218/2524730" target="_blank">https://stackoverflow.com/questions/134099/are-pdo-prepared-statements-sufficient-to-prevent-sql-injection</a> - using prepared statements in PDO is of the utmost importance, but they're not completely infallible, this explains how to further protect your queries while using prepared statements</li>		
 	</ul>
 	
-	<h2>Advanced</h2>
+	<h2><a id="advanced">Advanced</a></h2>
 	<p>Alright, you've made it this far, and the quirks of PHP haven't scared you away.  Here's additional material to further your learning.</p>
 	<ul>
 		<li><a href="https://patricklouys.com/professional-php/" target="_blank">https://patricklouys.com/professional-php/</a> This is a book written by the same author for the No-Framework Tutorial, but is updated.</li>
+		<li><a href="https://github.com/danack/example" target="_blank">https://github.com/danack/example</a> - Shows how to use Xdebug, Behat tests, Docker for local development, Supervisord for background workers and Slim framework with Auryn DI. This is beneficial to see how a full-fledged PHP application would look working inside Docker, with requisite documentation, and example code.</li>
 		<li><a href="https://stackoverflow.com/a/5864000/2524730" target="_blank">https://stackoverflow.com/questions/5863870/how-should-a-model-be-structured-in-mvc</a> - an explanation of what models are in the MVC relationship</li>
 		<li><a href="https://stackoverflow.com/a/16356866/2524730" target="_blank">https://stackoverflow.com/questions/16356420/mvc-for-advanced-php-developers</a> - a list of videos and reading material</li>
 	</ul>
 	
-	<h2>Development Environment</h2>
+	<h2><a id="development-environment">Development Environment</a></h2>
 	<p>PHP isn't the only thing you should learn! A useful skill is knowing how to set up your own development environment without using XAMPP.  Below are guides on setting up different development environments. (Note that VM means Virtual Machine)</p>
 	
-	<h3>Vagrant</h3>		
+	<h3><a id="vagrant">Vagrant</a></h3>		
 	<p><a href="https://www.vagrantup.com/intro/getting-started/index.html" target="_blank">https://www.vagrantup.com/intro/getting-started/index.html</a> - Vagrant is a software that allows you to set up a development environment VM quickly.  You can find vagrantboxes that other people have created and uploaded, in which you can use instead of setting up a VM in Vagrant from scratch</p>
 	
-	<h3>Docker</h3>
+	<h3><a id="docker">Docker</a></h3>
 	<p><a href="https://docs.docker.com/get-started/" target="_blank">https://docs.docker.com/get-started/</a> - another common development environment is Docker.  It is an alternative to VMs because it does not require the setting up and maintenance that regular VMs do.  It is able to do this through the use of <a href="https://www.docker.com/what-container" target="_blank">containers</a>.</p>
 	
-	<h3>Rolling Your Own VM</h3>
+	<h3><a id="roll-your-own-vm"><a id="rolling-your-own-vm">Rolling Your Own VM</a></a></h3>
 	<p>The options below are guides on setting up a development environment from scratch using a VM on your computer.</p>
 	<ul>
 		<li><a href="https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-16-04" target="_blank">Setting up a LAMP environment (Linux [Ubuntu], Apache, MySQL, PHP)</a></li>
 		<li><a href="https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-in-ubuntu-16-04" target="_blank">Setting up a LEMP environment (Linux [Ubuntu], nginx, MySQL, PHP)</a></li>
-		<li><a href="https://www.digitalocean.com/community/tutorials/how-to-install-lemp-nginx-mysql-php-stack-on-arch-linux" target="_blank">Another setting up a LEMP environment (Linux [Arch], nginx, MySQL, PHP</a></li>
+		<li><a href="https://www.digitalocean.com/community/tutorials/how-to-install-lemp-nginx-mysql-php-stack-on-arch-linux" target="_blank">Another setting up a LEMP environment (Linux [Arch], nginx, MySQL, PHP)</a></li>
 	</ul>
 	
-	<h3>Linux</h3>
+	<h3><a id="linux">Linux</a></h3>
 	<ul>
 		<li><a href="https://www.digitalocean.com/community/tutorials/an-introduction-to-linux-basics" target="_blank">https://www.digitalocean.com/community/tutorials/an-introduction-to-linux-basics</a> - Linux basics</li>
 		<!-- TODO: Add some more Linux guides -->
@@ -94,7 +96,7 @@
 	<p>If you have an aversion to Oracle products, you can use <a href="https://mariadb.org/" target="_blank">mariaDB</a> instead of MySQL which is virtually the same as MySQL, except that it is not owned by Oracle.</p>
 	<p>Lastly, <a href="http://www.giannistsakiris.com/2008/04/09/virtualbox-access-windows-host-shared-folders-from-ubuntu-guest/" target="_blank">this guide explains how to set up shared folders in Virtualbox from Windows</a>.  It took me a lot of digging to find it, and it was extremely helpful for me</a>.</p>
 	
-	<h2>Book Recommendations</h2>
+	<h2><a id="books">Book Recommendations</a></h2>
 	<p>Most of these are not specific to PHP, but if you're serious and dedicated to learning how to develop, here are some books that will help you.  I've chosen not to provide links to these books, as your preferred method of purchasing books may be different than mine.  Googling each book will give you options on how to purchase them.</p>
 	<ul>
 		<li><em>Clean Code</em> by Robert Martin</li>
